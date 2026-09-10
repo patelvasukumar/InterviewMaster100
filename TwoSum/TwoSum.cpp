@@ -5,19 +5,41 @@ using namespace std;
 
 class solution {
 
-public:
+    public:
 
     Vector<int> TwoSum(vector<int>& nums, int target) {
 
         if (2 <= nums.length <= 10000) {
 
-            cout << "Error";
+            cout << "The integers are out of bounds";
             exit(0);
-
-
         }
+        
         for (int i = 0; i < nums.length; i++) {
+            
+            if !(-1000000000 <= ( nums[i] ) <= 1000000000 ) {
+				cout << "Integers capacity exceeded";
+                exit(0);
+            }
 
         }
+
+        if !(-1000000000 <= target <= 1000000000) {
+            cout << "Target value is out of bounds";
+            exit(0);
+        }
+
+        for(int i = 0; i < nums.length; i++){
+            
+           
+
+        }
+
     }
+
+}
+
+int main(){
+
+
 }
