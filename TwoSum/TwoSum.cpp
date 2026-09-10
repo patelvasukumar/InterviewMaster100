@@ -30,7 +30,15 @@ class solution {
         }
 
         for(int i = 0; i < nums.length; i++){
-            
+			
+            int j = 0;
+
+                for(j < nums.length; j++) {
+                    
+                    if( i == j ) { continue; }
+                    if(nums[i] + nums[j] == target ) { return {i, j}; }
+
+                }
            
 
         }
@@ -41,5 +49,11 @@ class solution {
 
 int main(){
 
+    solution sol;
+	Vector<int> result;
+
+	result = sol.TwoSum({ 2, 7, 11, 15 }, 9);
+
+	cout << result; 
 
 }
