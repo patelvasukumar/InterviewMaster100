@@ -1,39 +1,40 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class solution {
-
+ 
     public:
 
-    Vector<int> TwoSum(vector<int>& nums, int target) {
+    vector<int> TwoSum(vector<int>& nums, int target) {
 
-        if (2 <= nums.length <= 10000) {
+        if (2 <= nums.size() <= 10000) {
 
             cout << "The integers are out of bounds";
             exit(0);
         }
         
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.size(); i++) {
             
-            if !(-1000000000 <= ( nums[i] ) <= 1000000000 ) {
+            if ( !(-1000000000 <= ( nums[i] ) <= 1000000000 ) ) {
 				cout << "Integers capacity exceeded";
                 exit(0);
             }
 
         }
 
-        if !(-1000000000 <= target <= 1000000000) {
+        if ( !(-1000000000 <= target <= 1000000000) ) {
             cout << "Target value is out of bounds";
             exit(0);
         }
 
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.size(); i++){
 			
             int j = 0;
 
-                for(j < nums.length; j++) {
+                for(j < nums.size(); j++) {
                     
                     if( i == j ) { continue; }
                     if(nums[i] + nums[j] == target ) { return {i, j}; }
@@ -45,7 +46,7 @@ class solution {
 
     }
 
-}
+};
 
 int main(){
 
