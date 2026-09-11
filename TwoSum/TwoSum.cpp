@@ -33,7 +33,7 @@ class solution {
         for(int i = 0; i < nums.size(); i++){
 			
             int j = 0;
-
+            
                 for(;j < nums.size(); j++) {
                     
                     if( i == j ) { continue; }
@@ -44,7 +44,10 @@ class solution {
 
         }
 
+        return {0};
     }
+
+     
 
 };
 
