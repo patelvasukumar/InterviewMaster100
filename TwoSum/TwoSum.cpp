@@ -8,7 +8,7 @@ class solution {
  
     public:
 
-    vector<int> TwoSum(vector<int>& nums, int target) {
+    vector<int> TwoSum(const vector<int>& nums, int target) {
 
         if (2 <= nums.size() <= 10000) {
 
