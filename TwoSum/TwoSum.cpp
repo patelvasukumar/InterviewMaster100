@@ -1,6 +1,4 @@
-/*
-Progrmmer Name : Vasu Patel
-*/
+
 
 #include <iostream>
 #include <string>
