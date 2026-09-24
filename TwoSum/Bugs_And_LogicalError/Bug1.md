@@ -1,7 +1,7 @@
-# Bug: 
+# Bug: out of bound bug
 
 **Problem:**  
-
+When the program started, it didn't generate the expected output. it gave out of bound error.
 
 **Expected:**  
 output : 0 9 
