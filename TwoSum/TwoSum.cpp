@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,22 +11,21 @@ class solution {
 
     vector<int> TwoSum(const vector<int>& nums, int target) {
 
-        if (2 <= nums.size() <= 10000) {
-
+        if (nums.size() < 2 || nums.size() > 10000) {
             cout << "The integers are out of bounds";
             exit(0);
         }
         
         for (int i = 0; i < nums.size(); i++) {
             
-            if ( !(-1000000000 <= ( nums[i] ) <= 1000000000 ) ) {
-				cout << "Integers capacity exceeded";
+            if (nums[i] < -1000000000 || nums[i] > 1000000000) {
+                cout << "Integers capacity exceeded";
                 exit(0);
             }
 
         }
 
-        if ( !(-1000000000 <= target <= 1000000000) ) {
+        if (target < -1000000000 || target > 1000000000) {
             cout << "Target value is out of bounds";
             exit(0);
         }
@@ -58,7 +56,7 @@ int main(){
     solution sol;
 	vector<int> result;
 
-	result = sol.TwoSum({ 2, 7, 11, 15 }, 9);
+	result = sol.TwoSum({ 5, 7, 11, 15, 5 }, 10);
 
 	cout << result[0] << " " << result[1] << endl;
      
