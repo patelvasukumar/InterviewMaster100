@@ -14,3 +14,38 @@ Important Notes:
 => 3 types of brackets: (), {}, [] 
 - - - - - - - - - - - - - - - - - - - - - - -
 
+Plan: 
+1. Enter the string: (){}[]
+2. the program will check the length. 
+3. it will check if it only contains valid characters: '(', ')', '{', '}', '[' and ']'.
+4. if no -> return false
+5. if starting three are these [first character] : }]) -> return false or if last three are these [last character] : {[( -> return false
+6. ignore spaces     
+7. if yes ->  then will search for right pattern 
+8. if pattern is correct -> return true & false  
+
+				{()()([]{})[]}
+				
+
+		LinkedList1:	[ | |  |  |  |  |  |  |  |  |  |  |  ]
+
+		LinkedList2:	[ | | | | | | | | | | | ]
+
+Operation: 
+1. Two stacks
+2. one pointer   
+3. LinkedList one : full with the user string
+4. LinkedList two : empty [can be needed]
+4.1 check if first three clsoing type or last three opening type -> return false
+5. Take last char from LinkedList1 one and push it to LinkedList2
+6. comapre new LL1 char with the last char of LL2
+7. if both are same type and first one is closing and second one is opening -> pop both and continue
+8. if not same type -> put char of LL1 on LL2 and continue
+
+9. when LL2 is empty but LL1 is not empty -> return false
+10. when both LL1 and LL2 are empty -> return true
+   
+   [ repeat 7 and 8 steps again ]      
+
+
+				
