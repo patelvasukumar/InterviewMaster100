@@ -48,4 +48,13 @@ Operation:
    [ repeat 7 and 8 steps again ]      
 
 
-				
+=> How to check valid characters:
+[code example from the internet:]
+==========================================
+for (char c : input) {
+if (c == 'a' || c == 'b' || c == 'c')
+    return true;
+
+return false;
+}
+==========================================

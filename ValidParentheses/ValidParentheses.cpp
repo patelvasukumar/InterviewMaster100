@@ -10,7 +10,12 @@ bool checkLength = false;
 
 string returnInputString(string input);
 bool checkTheLength(string input, long &length);
-void InvalidInputStringMessage(bool result);
+bool checkValidCharacters(string input);
+bool starting3Char(string input);
+bool endinf3Char(string input);
+
+void invalidInputStringMessage(bool result);
+
 
 
 int main(){
@@ -40,12 +45,51 @@ bool checkTheLength(string input, long &length) {
 		
 }
 
+bool checkValidCharacters(string input){  
 
+	for (char c: input) {
+		
+		if( c == '(' || c == ')' || c = '{' || c = '}' || c = '[' || c = ']') {
+		return true;
+		}
+		else {
+		return false;
+		}
+		
+	}
 
-void InvalidInputStringMessage(bool result){
+}
+
+bool starting3Char(string input) {
+	  
+	for (int i = 0; i < 3 && i < length; i++) {
+
+		if ( input[i] == ')' || input[i] == '}' || input[i] == ']') {
+			return false;
+		}
+
+	}
+
+	return true;
+}
+
+bool ending3Char(string input) {
+
+	for (int i = (length-1); i >= (length - 3) && i >= 0; i--) {
+
+		if (input[i] == '(' || input[i] == '{' || input[i] == '[') {
+			return false;
+		}
+
+	}
+	return true;
+}
+
+void invalidInputStringMessage(bool result){
 
 	if(result == false){
 		cout << "Invalid Parentheses String." << endl;
+		exit(0); 
 	}
 
 }
