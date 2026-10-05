@@ -27,23 +27,23 @@ Plan:
 				{()()([]{})[]}
 				
 
-		LinkedList1:	[ | |  |  |  |  |  |  |  |  |  |  |  ]
+		stack1:	[ | |  |  |  |  |  |  |  |  |  |  |  ]
 
-		LinkedList2:	[ | | | | | | | | | | | ]
+		stack2:	[ | | | | | | | | | | | ]
 
 Operation: 
-1. Two stacks
+1. Two stack
 2. one pointer   
-3. LinkedList one : full with the user string
-4. LinkedList two : empty [can be needed]
+3. stack one : full with the user string
+4. stack two : empty [can be needed]
 4.1 check if first three clsoing type or last three opening type -> return false
-5. Take last char from LinkedList1 one and push it to LinkedList2
-6. comapre new LL1 char with the last char of LL2
+5. Take last char from satck1 one and push it to stack2
+6. comapre new stack1 char with the last char of stack2
 7. if both are same type and first one is closing and second one is opening -> pop both and continue
-8. if not same type -> put char of LL1 on LL2 and continue
+8. if not same type -> put char of stack1 on stack2 and continue
 
-9. when LL2 is empty but LL1 is not empty -> return false
-10. when both LL1 and LL2 are empty -> return true
+9. when stack2 is empty but stack1 is not empty -> return false
+10. when both stack1 and stack2 are empty -> return true
    
    [ repeat 7 and 8 steps again ]      
 

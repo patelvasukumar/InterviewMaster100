@@ -14,7 +14,7 @@ bool checkTheLength(string input, long &length);
 bool checkValidCharacters(string input);
 bool starting3Char(string input);
 bool endinf3Char(string input);
-
+bool checkingValidOrder(string input);
 
 void invalidInputStringMessage(bool result);
 
@@ -36,6 +36,10 @@ int main(){
 	invalidInputStringMessage(result);
 
 	result = ending3Char(input);
+
+	invalidInputStringMessage(result);
+
+	result = checkingValidOrder(input);
 
 	invalidInputStringMessage(result);
   
@@ -102,7 +106,9 @@ bool ending3Char(string input) {
 	return true;
 }
 
+bool checkingValidOrder(string input) {
 
+}
 
 void invalidInputStringMessage(bool result){
 
