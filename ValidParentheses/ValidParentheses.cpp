@@ -7,6 +7,7 @@ using namespace std;
 string input = "";
 long length = 0;
 bool checkLength = false;
+bool result = true;
 
 string returnInputString(string input);
 bool checkTheLength(string input, long &length);
@@ -14,13 +15,29 @@ bool checkValidCharacters(string input);
 bool starting3Char(string input);
 bool endinf3Char(string input);
 
+
 void invalidInputStringMessage(bool result);
 
 
 
 int main(){
 
+	input = returnInputString(input);
+	result = checkTheLength(input,length);
 
+	invalidInputStringMessage(result);
+
+	result = checkValidCharacters(input);
+
+	invalidInputStringMessage(result);
+
+	result = starting3Char(input);
+
+	invalidInputStringMessage(result);
+
+	result = ending3Char(input);
+
+	invalidInputStringMessage(result);
   
 }
 
@@ -84,6 +101,8 @@ bool ending3Char(string input) {
 	}
 	return true;
 }
+
+
 
 void invalidInputStringMessage(bool result){
 
