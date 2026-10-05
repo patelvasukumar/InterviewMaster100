@@ -6,9 +6,12 @@ using namespace std;
 
 string input = "";
 long length = 0;
+bool checkLength = false;
 
 string returnInputString(string input);
-void checkTheLength(string input, long &length);
+bool checkTheLength(string input, long &length);
+void InvalidInputStringMessage(bool result);
+
 
 int main(){
 
@@ -25,8 +28,24 @@ string returnInputString(string input){
 		return input; 
 }
 
-void checkTheLength(string input, long &length) {
+bool checkTheLength(string input, long &length) {
 		
 		length = input.length();
+
+		if (length >= 1 && length <= 10000){
+		  return true;
+		}
+
+		return false;
 		
+}
+
+
+
+void InvalidInputStringMessage(bool result){
+
+	if(result == false){
+		cout << "Invalid Parentheses String." << endl;
+	}
+
 }
