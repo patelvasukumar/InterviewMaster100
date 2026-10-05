@@ -5,8 +5,10 @@
 using namespace std;
 
 string input = "";
+long length = 0;
 
 string returnInputString(string input);
+void checkTheLength(string input, long &length);
 
 int main(){
 
@@ -21,4 +23,10 @@ string returnInputString(string input){
 		input.erase( remove(input.begin(), input.end(), ' '), input.end() );
 		
 		return input; 
+}
+
+void checkTheLength(string input, long &length) {
+		
+		length = input.length();
+		
 }
